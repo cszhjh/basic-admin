@@ -1,0 +1,233 @@
+{
+  "id": "4236277",
+  "name": "game-admin",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "6303226",
+      "name": "rank",
+      "font_class": "rank",
+      "unicode": "e86a",
+      "unicode_decimal": 59498
+    },
+    {
+      "icon_id": "4518102",
+      "name": "运营管理",
+      "font_class": "operation",
+      "unicode": "ebd1",
+      "unicode_decimal": 60369
+    },
+    {
+      "icon_id": "6517471",
+      "name": "文件-日志",
+      "font_class": "log-title",
+      "unicode": "e715",
+      "unicode_decimal": 59157
+    },
+    {
+      "icon_id": "8765219",
+      "name": "导出",
+      "font_class": "export-title",
+      "unicode": "e631",
+      "unicode_decimal": 58929
+    },
+    {
+      "icon_id": "693576",
+      "name": "联系人",
+      "font_class": "contact",
+      "unicode": "e645",
+      "unicode_decimal": 58949
+    },
+    {
+      "icon_id": "8441737",
+      "name": "警报",
+      "font_class": "alert",
+      "unicode": "e68c",
+      "unicode_decimal": 59020
+    },
+    {
+      "icon_id": "22057668",
+      "name": "通道",
+      "font_class": "channel",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "11799097",
+      "name": "用户信息",
+      "font_class": "player-info-title",
+      "unicode": "e663",
+      "unicode_decimal": 58979
+    },
+    {
+      "icon_id": "26759543",
+      "name": "扑克21点",
+      "font_class": "blackjack",
+      "unicode": "e69f",
+      "unicode_decimal": 59039
+    },
+    {
+      "icon_id": "23087027",
+      "name": "修改用户信息",
+      "font_class": "change-player-title",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "10707439",
+      "name": "退款记录",
+      "font_class": "record-title",
+      "unicode": "e647",
+      "unicode_decimal": 58951
+    },
+    {
+      "icon_id": "10945251",
+      "name": "功能配置",
+      "font_class": "function-title",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "2640548",
+      "name": "报表",
+      "font_class": "retention-title",
+      "unicode": "e636",
+      "unicode_decimal": 58934
+    },
+    {
+      "icon_id": "4920036",
+      "name": "退款审核",
+      "font_class": "audit-title",
+      "unicode": "e659",
+      "unicode_decimal": 58969
+    },
+    {
+      "icon_id": "26841830",
+      "name": "配置",
+      "font_class": "setting-title",
+      "unicode": "ea3f",
+      "unicode_decimal": 59967
+    },
+    {
+      "icon_id": "7226965",
+      "name": "游戏金币",
+      "font_class": "gold-title",
+      "unicode": "e67d",
+      "unicode_decimal": 59005
+    },
+    {
+      "icon_id": "1381707",
+      "name": "客服",
+      "font_class": "gm",
+      "unicode": "e686",
+      "unicode_decimal": 59014
+    },
+    {
+      "icon_id": "2959034",
+      "name": "基础数据",
+      "font_class": "home-title",
+      "unicode": "e620",
+      "unicode_decimal": 58912
+    },
+    {
+      "icon_id": "845779",
+      "name": "钱",
+      "font_class": "money-title",
+      "unicode": "e641",
+      "unicode_decimal": 58945
+    },
+    {
+      "icon_id": "24492794",
+      "name": "Game",
+      "font_class": "game-button",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "2295994",
+      "name": "大转盘",
+      "font_class": "dazhuanpan",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "6807501",
+      "name": "Slot-7",
+      "font_class": "slot",
+      "unicode": "ec5d",
+      "unicode_decimal": 60509
+    },
+    {
+      "icon_id": "12196116",
+      "name": "扫雷",
+      "font_class": "saolei",
+      "unicode": "e704",
+      "unicode_decimal": 59140
+    },
+    {
+      "icon_id": "24166420",
+      "name": "彩票",
+      "font_class": "plinko",
+      "unicode": "e814",
+      "unicode_decimal": 59412
+    },
+    {
+      "icon_id": "27363290",
+      "name": "car-crash",
+      "font_class": "crash",
+      "unicode": "eb04",
+      "unicode_decimal": 60164
+    },
+    {
+      "icon_id": "27789731",
+      "name": "bingo.2",
+      "font_class": "bingo",
+      "unicode": "e9d5",
+      "unicode_decimal": 59861
+    },
+    {
+      "icon_id": "1722993",
+      "name": "监控",
+      "font_class": "jiankong",
+      "unicode": "e7bd",
+      "unicode_decimal": 59325
+    },
+    {
+      "icon_id": "4739125",
+      "name": "实时数据",
+      "font_class": "realtime",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    },
+    {
+      "icon_id": "5835477",
+      "name": "设置",
+      "font_class": "setting",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "9523730",
+      "name": "more-缓存数据",
+      "font_class": "retention",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "21762177",
+      "name": "游戏数据",
+      "font_class": "game",
+      "unicode": "e6f0",
+      "unicode_decimal": 59120
+    },
+    {
+      "icon_id": "8350784",
+      "name": "home",
+      "font_class": "home",
+      "unicode": "ea43",
+      "unicode_decimal": 59971
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 4236277 */
+  src: url('iconfont.woff2?t=1705373870055') format('woff2'),
+       url('iconfont.woff?t=1705373870055') format('woff'),
+       url('iconfont.ttf?t=1705373870055') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-rank:before {
+  content: "\e86a";
+}
+
+.icon-operation:before {
+  content: "\ebd1";
+}
+
+.icon-log-title:before {
+  content: "\e715";
+}
+
+.icon-export-title:before {
+  content: "\e631";
+}
+
+.icon-contact:before {
+  content: "\e645";
+}
+
+.icon-alert:before {
+  content: "\e68c";
+}
+
+.icon-channel:before {
+  content: "\e60f";
+}
+
+.icon-player-info-title:before {
+  content: "\e663";
+}
+
+.icon-blackjack:before {
+  content: "\e69f";
+}
+
+.icon-change-player-title:before {
+  content: "\e612";
+}
+
+.icon-record-title:before {
+  content: "\e647";
+}
+
+.icon-function-title:before {
+  content: "\e609";
+}
+
+.icon-retention-title:before {
+  content: "\e636";
+}
+
+.icon-audit-title:before {
+  content: "\e659";
+}
+
+.icon-setting-title:before {
+  content: "\ea3f";
+}
+
+.icon-gold-title:before {
+  content: "\e67d";
+}
+
+.icon-gm:before {
+  content: "\e686";
+}
+
+.icon-home-title:before {
+  content: "\e620";
+}
+
+.icon-money-title:before {
+  content: "\e641";
+}
+
+.icon-game-button:before {
+  content: "\e613";
+}
+
+.icon-dazhuanpan:before {
+  content: "\e601";
+}
+
+.icon-slot:before {
+  content: "\ec5d";
+}
+
+.icon-saolei:before {
+  content: "\e704";
+}
+
+.icon-plinko:before {
+  content: "\e814";
+}
+
+.icon-crash:before {
+  content: "\eb04";
+}
+
+.icon-bingo:before {
+  content: "\e9d5";
+}
+
+.icon-jiankong:before {
+  content: "\e7bd";
+}
+
+.icon-realtime:before {
+  content: "\e61a";
+}
+
+.icon-setting:before {
+  content: "\e610";
+}
+
+.icon-retention:before {
+  content: "\e608";
+}
+
+.icon-game:before {
+  content: "\e6f0";
+}
+
+.icon-home:before {
+  content: "\ea43";
+}
+

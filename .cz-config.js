@@ -1,16 +1,18 @@
 module.exports = {
   types: [
-    { value: 'feat', name: '✨新增:    新的内容' },
-    { value: 'fix', name: '🐛修复:    修复一个Bug' },
-    { value: 'docs', name: '📝文档:    变更的只有文档' },
-    { value: 'style', name: '💄格式:    空格, 分号等格式修复' },
-    { value: 'refactor', name: '♻️重构:    代码重构，注意和特性、修复区分开' },
-    { value: 'perf', name: '⚡️性能:    提升性能' },
-    { value: 'test', name: '✅测试:    添加一个测试' },
-    { value: 'ci', name: '🔧工具:    开发工具变动(构建、脚手架工具等)' },
-    { value: 'revert', name: '⏪回滚:    代码回退' },
-    { value: 'chore', name: '🗯其他:    其他修改' },
-    { value: 'build', name: '🔨构建:    修改项目构建或外部依赖' }
+    { value: 'feat', name: '✨ 新增:    新的内容' },
+    { value: 'fix', name: '🐛 修复:    修复一个Bug' },
+    { value: 'docs', name: '📝 文档:    变更的只有文档' },
+    { value: 'style', name: '💄 格式:    空格, 分号等格式修复' },
+    { value: 'refactor', name: '♻️ 重构:    代码重构，注意和特性、修复区分开' },
+    { value: 'perf', name: '⚡️ 性能:    提升性能' },
+    { value: 'test', name: '✅ 测试:    添加一个测试' },
+    { value: 'ci', name: '🔧 工具:    开发工具变动(构建、脚手架工具等)' },
+    { value: 'revert', name: '⏪ 回滚:    代码回退' },
+    { value: 'chore', name: '🗯 其他:    其他修改' },
+    { value: 'build', name: '🔨 构建:    修改项目构建或外部依赖' },
+    { value: 'wip', name: '🚧 开发中:    开发中' },
+    { value: 'types', name: '🏷️ 类型修改:    类型定义文件更改' }
   ],
 
   // scope 类型（定义之后，可通过上下键选择）

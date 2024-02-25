@@ -1,3 +1,8 @@
+export interface LockInfo {
+  pwd?: string;
+  isLock?: boolean;
+}
+
 export interface UserInfo {
   userId: number;
   token: string;

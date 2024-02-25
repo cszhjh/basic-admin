@@ -21,7 +21,7 @@ export const router = createRouter({
   routes: basicRoutes as unknown as RouteRecordRaw[],
   // 是否应该禁止尾部斜杠。默认为false
   strict: true,
-  // 在支持html5 history的浏览器中，设置前后导航时滚动位置为页面顶部
+  // 在支持html5 history的浏览器中，设置前进、后台、导航改变时滚动位置为页面顶部
   scrollBehavior: () => ({ left: 0, top: 0 }),
 });
 

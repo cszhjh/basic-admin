@@ -27,6 +27,11 @@ export interface GlobEnvConfig {
    * 上传文件的 URL。
    */
   VITE_GLOB_UPLOAD_URL?: string;
+
+  /**
+   * AJAX 请求的超时时间。
+   */
+  VITE_GLOB_TIMEOUT: number;
 }
 
 export interface MenuSetting {
@@ -134,4 +139,19 @@ export interface ProjectConfig {
   useOpenBackTop: boolean;
   // 切换界面时是否取消已发送但未响应的http请求
   removeAllHttpPending: boolean;
+}
+
+export interface GlobConfig {
+  // 网站标题
+  title: string;
+  // 服务接口URL
+  apiUrl: string;
+  // 上传URL
+  uploadUrl?: string;
+  // 服务接口URL前缀
+  urlPrefix?: string;
+  // 项目缩写
+  shortName: string;
+  // AJAX请求超时时间
+  timeout: number;
 }

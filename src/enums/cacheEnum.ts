@@ -4,6 +4,11 @@ export const PROJ_CFG_KEY = 'PROJ__CFG__KEY__';
 // token key
 export const TOKEN_KEY = 'TOKEN__';
 
+// role ID key
+export const ROLE_KEY = 'ROLE__';
+
+export const IS_ADMIN_KEY = 'IS_ADMIN__';
+
 export const LOCALE_KEY = 'LOCALE__';
 
 // user info key
@@ -21,6 +26,9 @@ export const APP_LOCAL_CACHE_KEY = 'COMMON__LOCAL__KEY__';
 
 // base global session key
 export const APP_SESSION_CACHE_KEY = 'COMMON__SESSION__KEY__';
+
+// table columns setting
+export const TABLE_SETTING_KEY = 'TABLE__SETTING__KEY__';
 
 // storage type
 export enum CacheTypeEnum {

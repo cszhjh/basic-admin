@@ -10,4 +10,4 @@ export const cacheCipher = {
 };
 
 // 系统缓存是否使用aes加密
-export const enableStorageEncryption = !isDevMode();
+export const SHOULD_ENABLE_STORAGE_ENCRYPTION = !isDevMode();

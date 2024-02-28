@@ -1,6 +1,16 @@
+import type { RouteMeta } from 'vue-router';
+import { ErrorTypeEnum } from '@/enums/exceptionEnum';
+import { MenuModeEnum, MenuTypeEnum } from '@/enums/menuEnum';
+import type { RoleInfo } from '@/api/user/model';
+
 export interface LockInfo {
   pwd?: string;
   isLock?: boolean;
+}
+
+export interface ApiAddress {
+  key: string;
+  val: string;
 }
 
 // 错误日志信息
@@ -27,25 +37,42 @@ export interface UserInfo {
   userId: number;
   token: string;
   roleId: number;
+  roles?: RoleInfo[];
   name: string;
   currencyType: string;
   isAdmin: boolean;
   time: number;
-  menu: Menu[];
+  menu: BackMenuList;
   channelNames: string[];
+  homePath?: string;
 }
 
-export interface Menu {
-  menuId: number;
-  name: string;
-  url: string;
-  grade: number;
-  children?: Menu;
+export interface RouteItem {
+  path: string;
+  component: any;
+  meta: RouteMeta;
+  name?: string;
+  alias?: string | string[];
+  redirect?: string;
+  caseSensitive?: boolean;
+  children?: RouteItem[];
 }
+
+/**
+ * @description: Get menu return value
+ */
+export type BackMenuList = RouteItem[];
 
 export interface LoginParams {
   username: string;
   password: string;
+}
+
+export interface BeforeMiniState {
+  menuCollapsed?: boolean;
+  menuSplit?: boolean;
+  menuMode?: MenuModeEnum;
+  menuType?: MenuTypeEnum;
 }
 
 export interface TableSetting {

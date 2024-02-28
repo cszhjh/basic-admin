@@ -13,7 +13,7 @@ import nProgress from 'nprogress';
 import projectSetting from '@/settings/projectSetting';
 import { createParamMenuGuard } from './paramMenuGuard';
 
-// Don't change the order of creation
+// 不要改变创建的顺序
 export function setupRouterGuard(router: Router) {
   createPageGuard(router);
   createPageLoadingGuard(router);
@@ -22,7 +22,7 @@ export function setupRouterGuard(router: Router) {
   createMessageGuard(router);
   createProgressGuard(router);
   createPermissionGuard(router);
-  createParamMenuGuard(router); // must after createPermissionGuard (menu has been built.)
+  createParamMenuGuard(router); // 必须在 createPermissionGuard 之后（菜单已构建）
   createStateGuard(router);
 }
 
@@ -66,8 +66,8 @@ function createPageLoadingGuard(router: Router) {
   });
   router.afterEach(async () => {
     if (unref(getOpenPageLoading)) {
-      // TODO Looking for a better way
-      // The timer simulates the loading time to prevent flashing too fast,
+      // TODO 寻找更好的方法
+      // 计时器模拟加载时间，防止闪烁过快
       setTimeout(() => {
         appStore.setPageLoading(false);
       }, 220);
@@ -77,7 +77,7 @@ function createPageLoadingGuard(router: Router) {
 }
 
 /**
- * The interface used to close the current page to complete the request when the route is switched
+ * 用于在路由切换时关闭当前页面未完成请求的接口
  * @param router
  */
 function createHttpGuard(router: Router) {
@@ -87,13 +87,13 @@ function createHttpGuard(router: Router) {
     axiosCanceler = new AxiosCanceler();
   }
   router.beforeEach(async () => {
-    // Switching the route will delete the previous request
+    // 切换路由将删除之前的请求
     axiosCanceler?.removeAllPending();
     return true;
   });
 }
 
-// Routing switch back to the top
+// 路由切换回到顶部
 function createScrollGuard(router: Router) {
   const isHash = (href: string) => {
     return /^#/.test(href);
@@ -102,14 +102,14 @@ function createScrollGuard(router: Router) {
   const body = document.body;
 
   router.afterEach(async (to) => {
-    // scroll top
+    // 滚动到顶部
     isHash((to as RouteLocationNormalized & { href: string })?.href) && body.scrollTo(0, 0);
     return true;
   });
 }
 
 /**
- * Used to close the message instance when the route is switched
+ * 在路由切换时关闭消息实例
  * @param router
  */
 export function createMessageGuard(router: Router) {
@@ -128,6 +128,10 @@ export function createMessageGuard(router: Router) {
   });
 }
 
+/**
+ * 路由切换时创建进度条
+ * @param router
+ */
 export function createProgressGuard(router: Router) {
   const { getOpenNProgress } = useTransitionSetting();
   router.beforeEach(async (to) => {

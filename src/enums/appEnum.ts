@@ -29,3 +29,13 @@ export enum SettingButtonPositionEnum {
   HEADER = 'header',
   FIXED = 'fixed',
 }
+
+/**
+ * 路由权限模式
+ */
+export enum PermissionModeEnum {
+  // 后端路由
+  BACK = 'BACK',
+  // 路由映射（前端路由）
+  ROUTE_MAPPING = 'ROUTE_MAPPING',
+}

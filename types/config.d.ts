@@ -100,6 +100,8 @@ export interface ProjectConfig {
   showDarkModeToggle: boolean;
   // 配置按钮显示位置
   settingButtonPosition: SettingButtonPositionEnum;
+  // 权限模式
+  permissionMode: PermissionModeEnum;
   // 会话超时处理
   sessionTimeoutProcessing: SessionTimeoutProcessingEnum;
   // 网站灰色模式，用于可能的哀悼日期
@@ -137,6 +139,8 @@ export interface ProjectConfig {
   useErrorHandle: boolean;
   // 是否开启返回顶部
   useOpenBackTop: boolean;
+  // 切换界面时是否删除未关闭的 Modal 和 Notification
+  closeMessageOnSwitch: boolean;
   // 切换界面时是否取消已发送但未响应的http请求
   removeAllHttpPending: boolean;
 }

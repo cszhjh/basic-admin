@@ -3,6 +3,7 @@ import { MenuTypeEnum, MenuModeEnum, TriggerEnum, MixSidebarTriggerEnum } from '
 import { CacheTypeEnum } from '/@/enums/cacheEnum';
 import {
   ContentEnum,
+  PermissionModeEnum,
   ThemeEnum,
   RouterTransitionEnum,
   SettingButtonPositionEnum,
@@ -20,8 +21,11 @@ const setting: ProjectConfig = {
   // 是否显示主题切换按钮
   showDarkModeToggle: true,
 
-  // `设置`按钮位置
+  // '设置'按钮位置
   settingButtonPosition: SettingButtonPositionEnum.AUTO,
+
+  // 权限模式
+  permissionMode: PermissionModeEnum.BACK,
 
   // 权限相关缓存存储在sessionStorage或localStorage中
   permissionCacheType: CacheTypeEnum.LOCAL,
@@ -162,8 +166,11 @@ const setting: ProjectConfig = {
   // 是否开启返回顶部
   useOpenBackTop: true,
 
+  // 切换界面时是否删除未关闭的 Modal 和 Notification
+  closeMessageOnSwitch: true,
+
   // 切换界面时是否取消已发送但未响应的http请求。
-  // 如果启用，我想在单独的接口中进行覆盖设置
+  // 如果启用，可以在单独的接口中进行覆盖设置
   removeAllHttpPending: false,
 };
 

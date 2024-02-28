@@ -1,3 +1,16 @@
+import { ThemeEnum } from '@/enums/appEnum';
+
+export const multipleTabHeight = 30;
+
+export const darkMode = ThemeEnum.LIGHT;
+
+// .@{namespace}-layout-multiple-header__placeholder
+// 全屏页头动画时长
+export const layoutMultipleHeaderPlaceholderTime = 0.6;
+
+// 页脚固定高度
+export const footerHeight = 75;
+
 // header preset color
 export const HEADER_PRESET_BG_COLOR_LIST: string[] = [
   '#ffffff',

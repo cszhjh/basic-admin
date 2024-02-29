@@ -26,7 +26,7 @@ export const useErrorLogStore = defineStore('app-error-log', () => {
     return state.value.errorLogListCount;
   });
 
-  /** actions start */
+  /** mutations start */
   function addErrorLogInfo(info: ErrorLogInfo) {
     const item = {
       ...info,
@@ -67,7 +67,7 @@ export const useErrorLogStore = defineStore('app-error-log', () => {
     }
     addErrorLogInfo(errInfo as ErrorLogInfo);
   }
-  /** actions end */
+  /** mutations end */
 
   return {
     state,

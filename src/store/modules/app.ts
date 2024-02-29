@@ -45,7 +45,7 @@ export const useAppStore = defineStore('app', () => {
   const getApiAddress = computed(() => JSON.parse(localStorage.getItem(API_ADDRESS) || '{}'));
   /** getters end */
 
-  /** sync actions start */
+  /** mutations start */
   function setPageLoading(loading: boolean): void {
     state.value.pageLoading = loading;
   }
@@ -71,9 +71,9 @@ export const useAppStore = defineStore('app', () => {
     );
     Persistent.setLocal(PROJ_CFG_KEY, state.value.projectConfig);
   }
-  /** sync actions end */
+  /** mutations end */
 
-  /** async actions start */
+  /** actions start */
   async function resetAllState() {
     resetRouter();
     Persistent.clearAll();
@@ -91,13 +91,13 @@ export const useAppStore = defineStore('app', () => {
       clearTimeout(timeId);
     }
   }
-  /** async actions end */
+  /** actions end */
 
-  /** method actions start */
+  /** methods start */
   function setApiAddress(config: ApiAddress): void {
     localStorage.setItem(API_ADDRESS, JSON.stringify(config));
   }
-  /** method actions end */
+  /** methods end */
 
   return {
     getPageLoading,

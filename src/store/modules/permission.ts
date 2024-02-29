@@ -52,7 +52,7 @@ export const usePermissionStore = defineStore('app-permission', () => {
   });
   /** getters end */
 
-  /** sync actions start */
+  /** mutations start */
   function setFrontMenuList(menuList: Menu[]) {
     state.value.frontMenuList = menuList;
   }
@@ -78,9 +78,9 @@ export const usePermissionStore = defineStore('app-permission', () => {
       backMenuList: [],
     };
   }
-  /** sync actions end */
+  /** mutations end */
 
-  /** async actions start */
+  /** actions start */
   // 构建路由
   async function buildRoutesAction(): Promise<AppRouteRecordRaw[]> {
     const userStore = useUserStore();
@@ -97,6 +97,7 @@ export const usePermissionStore = defineStore('app-permission', () => {
       const { roles } = meta || {};
       if (!roles) return true;
       // 用户角色是否包含当前路由的角色权限
+      // fix: 修复角色权限判断问题，roles应该为string
       return roleList.some((role) => roles.includes(role));
     };
 
@@ -198,7 +199,7 @@ export const usePermissionStore = defineStore('app-permission', () => {
     patchHomeAffix(routes);
     return routes;
   }
-  /** async actions end */
+  /** actions end */
 
   return {
     getFrontMenuList,
@@ -214,7 +215,7 @@ export const usePermissionStore = defineStore('app-permission', () => {
   };
 });
 
-// 需要在设置之外使用
+// 需要在setup之外使用
 export function usePermissionStoreWithOut() {
   return usePermissionStore(store);
 }

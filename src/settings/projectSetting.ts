@@ -128,6 +128,8 @@ const setting: ProjectConfig = {
     showRedo: true,
     // 是否显示折叠按钮
     showFold: true,
+    // 自动折叠
+    autoCollapse: false,
   },
 
   // 过渡设置

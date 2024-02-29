@@ -46,10 +46,6 @@ export function useHeaderSetting() {
 
   const getShowMixHeaderRef = computed(() => !unref(getIsSidebarType) && unref(getShowHeader));
 
-  const getShowDoc = computed(() => appStore.getHeaderSetting.showDoc);
-
-  const getShowApi = computed(() => appStore.getHeaderSetting.showApi);
-
   const getHeaderTheme = computed(() => appStore.getHeaderSetting.theme);
 
   const getShowHeader = computed(() => appStore.getHeaderSetting.show);
@@ -63,8 +59,6 @@ export function useHeaderSetting() {
   const getUseLockPage = computed(() => appStore.getHeaderSetting.useLockPage);
 
   const getShowFullScreen = computed(() => appStore.getHeaderSetting.showFullScreen);
-
-  const getShowNotice = computed(() => appStore.getHeaderSetting.showNotice);
 
   const getShowBread = computed(() => {
     return (
@@ -87,13 +81,10 @@ export function useHeaderSetting() {
   return {
     setHeaderSetting,
 
-    getShowDoc,
-    getShowApi,
     getShowSearch,
     getHeaderTheme,
     getUseLockPage,
     getShowFullScreen,
-    getShowNotice,
     getShowBread,
     getShowContent,
     getShowHeaderLogo,

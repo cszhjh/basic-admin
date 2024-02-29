@@ -49,4 +49,9 @@ export interface Menu {
   hideMenu?: boolean;
 }
 
+export interface MenuModule {
+  orderNo?: number;
+  menu: Menu;
+}
+
 export type AppRouteModule = AppRouteRecordRaw;

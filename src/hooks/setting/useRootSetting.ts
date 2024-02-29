@@ -19,8 +19,6 @@ export function useRootSetting() {
 
   const getSettingButtonPosition = computed(() => appStore.getProjectConfig.settingButtonPosition);
 
-  const getCanEmbedIFramePage = computed(() => appStore.getProjectConfig.canEmbedIFramePage);
-
   const getPermissionMode = computed(() => appStore.getProjectConfig.permissionMode);
 
   const getShowLogo = computed(() => appStore.getProjectConfig.showLogo);
@@ -76,7 +74,6 @@ export function useRootSetting() {
     getLayoutContentMode,
     getPageLoading,
     getOpenKeepAlive,
-    getCanEmbedIFramePage,
     getPermissionMode,
     getShowLogo,
     getUseErrorHandle,

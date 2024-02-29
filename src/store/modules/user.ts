@@ -1,13 +1,13 @@
 import type { UserInfo, LoginParams, BackMenuList } from '#/store';
 import type { ErrorMessageMode } from '#/axios';
 import type { RouteRecordRaw } from 'vue-router';
+import type { RoleInfo } from '@/api/user/model';
 import { ref, computed, h } from 'vue';
 import { defineStore } from 'pinia';
 import { store } from '@/store';
 import { router } from '@/router';
 import { useMessage } from '@/hooks/web/useMessage';
 import { PageEnum } from '@/enums/pageEnum';
-import { RoleEnum } from '@/enums/roleEnum';
 import { ROLE_KEY, IS_ADMIN_KEY, TOKEN_KEY, USER_INFO_KEY } from '@/enums/cacheEnum';
 import { PAGE_NOT_FOUND_ROUTE } from '@/router/routes/basic';
 import { getAuthCache, setAuthCache } from '@/utils/auth';
@@ -19,7 +19,7 @@ interface UserState {
   menuList?: BackMenuList;
   token?: string;
   roleId?: number;
-  roles?: RoleEnum[];
+  roles?: RoleInfo[];
   isAdmin?: boolean;
   // 登陆是否过期
   sessionTimeout?: boolean;
@@ -52,7 +52,7 @@ export const useUserStore = defineStore('app-user', () => {
   const getLastUpdateTime = computed(() => state.value.lastUpdateTime);
   /** getters end */
 
-  /** sync actions start */
+  /** mutations start */
   function setUserInfo(info: Nullable<UserInfo>) {
     state.value.userInfo = info;
     state.value.lastUpdateTime = new Date().getTime();
@@ -81,9 +81,19 @@ export const useUserStore = defineStore('app-user', () => {
   function setSessionTimeout(flag: boolean) {
     state.value.sessionTimeout = flag;
   }
-  /** sync actions end */
 
-  /** async actions start */
+  function resetState() {
+    state.value.userInfo = null;
+    state.value.menuList = [];
+    state.value.token = '';
+    state.value.roleId = undefined;
+    state.value.roles = [];
+    state.value.isAdmin = undefined;
+    state.value.sessionTimeout = false;
+  }
+  /** mutations end */
+
+  /** actions start */
   async function login(
     params: LoginParams & {
       goHome?: boolean;
@@ -162,7 +172,7 @@ export const useUserStore = defineStore('app-user', () => {
   }
   /** actions end */
 
-  /** method actions start */
+  /** methods start */
   /**
    * @description: Confirm before logging out
    */
@@ -179,7 +189,7 @@ export const useUserStore = defineStore('app-user', () => {
     });
   }
 
-  /** method actions end */
+  /** methods end */
 
   return {
     getUserInfo,
@@ -192,6 +202,7 @@ export const useUserStore = defineStore('app-user', () => {
     getLastUpdateTime,
     setToken,
     setSessionTimeout,
+    resetState,
     login,
     logout,
     afterLoginAction,

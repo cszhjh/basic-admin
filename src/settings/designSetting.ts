@@ -1,5 +1,7 @@
 import { ThemeEnum } from '@/enums/appEnum';
 
+export const prefixCls = 'husky';
+
 export const multipleTabHeight = 30;
 
 export const darkMode = ThemeEnum.LIGHT;

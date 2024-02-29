@@ -16,6 +16,21 @@ declare global {
     -readonly [P in keyof T]: T[P];
   };
 
+  /**
+   * 任意类型的异步函数
+   */
+  declare type AnyPromiseFunction = (...arg: any[]) => PromiseLike<any>;
+
+  /**
+   * 任意类型的普通函数
+   */
+  declare type AnyNormalFunction = (...arg: any[]) => any;
+
+  /**
+   * 任意类型的函数
+   */
+  declare type AnyFunction = AnyNormalFunction | AnyPromiseFunction;
+
   declare type Nullable<T> = T | null;
   declare type NonNullable<T> = T extends null | undefined ? never : T;
   declare type Recordable<T = any> = Record<string, T>;

@@ -1,9 +1,9 @@
-import { AppRouteModule } from '@/router/types';
+import type { RouteParams } from 'vue-router';
+import type { AppRouteModule } from '@/router/types';
 import type { MenuModule, Menu, AppRouteRecordRaw } from '@/router/types';
 import { findPath, treeMap } from '@/utils/helper/treeHelper';
 import { cloneDeep } from 'lodash-es';
 import { isHttpUrl } from '@/utils/is';
-import { RouteParams } from 'vue-router';
 import { toRaw } from 'vue';
 
 export function getAllParentPath<T = Recordable>(treeData: T[], path: string) {
@@ -81,7 +81,7 @@ export function transformRouteToMenu(routeModList: AppRouteModule[], routerMappi
 }
 
 /**
- * config menu with given params
+ * 使用给定的参数配置菜单
  */
 const menuParamRegex = /(?::)([\s\S]+?)((?=\/)|$)/g;
 
@@ -96,7 +96,7 @@ export function configureDynamicParamsMenu(menu: Menu, params: RouteParams) {
       realPath = realPath.replace(`:${realIt}`, params[realIt] as string);
     }
   });
-  // save original param path.
+  // 保存原始参数路径
   if (!paramPath && matchArr && matchArr.length > 0) {
     menu.paramPath = path;
   }
